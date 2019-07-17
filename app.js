@@ -47,20 +47,6 @@ const movie = [
         genre: 'streaming video',
         producer: '',
         showDetail: false,
-    },
-    {
-        title: 'Title 1',
-        description: "A slow-burning Breaking Bad prequel.",
-        genre: 'e-book',
-        producer: '',
-        showDetail: false,
-    },
-    {
-        title: 'Title 2',
-        description: "A slow-burning Breaking Bad prequel.",
-        genre: 'e-book',
-        producer: '',
-        showDetail: false,
     }
 ]
 
