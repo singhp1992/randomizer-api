@@ -35,7 +35,7 @@ p {
     display: inline-flex;
 }
 
-.menu h1,
+.menu a,
 .genres {
     margin-left: 20px; 
     margin-right: 20px;
