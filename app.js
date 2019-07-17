@@ -5,6 +5,7 @@ const movie = [
         genre: 'Family',
         director: 'Karen Gilchrist',
         rating: 'G',
+        poster: 'https://m.media-amazon.com/images/M/MV5BMTg2MzI1MTg3OF5BMl5BanBnXkFtZTgwNTU3NDA2MTI@._V1_SX300.jpg',
         showDetail: false,
     },
     {
@@ -12,6 +13,7 @@ const movie = [
         description: "A delightful children's movie.",
         genre: 'Family',
         director: 'Karen Gilchrist',
+        rating: 'G',
         showDetail: false,
     },
     {
@@ -19,6 +21,7 @@ const movie = [
         description: "Crazy Cannibal",
         genre: 'Horror',
         director: 'Ron Bozman',
+        rating: 'R',
         showDetail: false
     },
     {
@@ -26,6 +29,7 @@ const movie = [
         description: "Hours of beautiful but heart attack-inducing nature footage",
         genre: 'Documentary',
         director: 'David Attenborough',
+        rating: 'G',
         showDetail: false,
     },
     {
@@ -33,6 +37,7 @@ const movie = [
         description: "The boat sinks.",
         genre: 'Romance',
         director: 'James Cameron',
+        rating: 'PG-13',
         showDetail: false,
     }
 ]
@@ -43,25 +48,25 @@ const app = new Vue(
         data: {
             title: 'Movie Library',
             movieList: movie,
-            genre: ''
+            rating: ''
         },
         methods: {
             toggleDetails: function (movie) {
                 movie.showDetail = !movie.showDetail
             },
             filterList: function () {
-                this.genre = event.target.value;
+                this.rating = event.target.value;
             }
         },
         computed: {
             uniqueItemsList: function () {
-                const genres = [];
+                const ratings = [];
                 this.movieList.forEach((item) => {
-                    if (!genres.includes(item.genre)) {
-                        genres.push(item.genre);
+                    if (!ratings.includes(item.rating)) {
+                        ratings.push(item.rating);
                     }
                 });
-                return genres;
+                return ratings;
             }
         }
     },

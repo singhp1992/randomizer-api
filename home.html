@@ -41,16 +41,16 @@
 
         <div class="container">
             <div id="movie-list">
-                Sort by Genre:  
+                Sort by Rating:  
                 <select v-on:change="filterList"> 
                     <option value="">All</option>
                     <option v-for="item in uniqueItemsList">{{ item }}</option>
                 </select>
                 <ul>
-                    <li v-show="genre === '' || genre === movie.genre" 
+                    <li v-show="rating === '' || rating === movie.rating" 
                         v-for="movie in movieList"
                         v-on:click="toggleDetails(movie)" 
-                        v-bind:class="[movie.showDetail ? 'less': 'more', movie.genre]">
+                        v-bind:class="[movie.showDetail ? 'less': 'more', movie.rating]">
                         <h3>{{movie.title}}</h3>
                         <div v-show="movie.showDetail">
                             <p>{{movie.description}}</p>
