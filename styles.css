@@ -23,6 +23,18 @@ p {
     color: #333;
 }
 
+.menu {
+    border-bottom: #333 solid 2px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: #333;
+}
+
 .more:after {
     content: "\25BC";
     font-size: 8px;
