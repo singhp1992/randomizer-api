@@ -16,7 +16,21 @@
             <nav-bar :href="post.title.toLowerCase() + '.html'" v-for="post in posts" v-bind:key="post.id" v-bind:title="post.title"></nav-bar>
         </div>
         <div class="container">
-
+            <div id="movie-list">
+                <!-- <select v-on:change="filterList">
+                    <option value="">Sort by Genre</option>
+                    <option v-for="item in uniqueItemsList">{{ item }}</option>
+                </select> -->
+                <ul>
+                    <li v-show="genre === '' || genre === movie.genre" v-for="movie in movieList" v-on:click="toggleDetails(movie)" v-bind:class="[movie.showDetail ? 'less': 'more', movie.genre]">
+                        <h3>{{movie.genre}}</h3>
+                        <div v-show="movie.showDetail">
+                            <p>{{movie.description}}</p>
+                            <p v-if="movie.director" class="byline">By: {{movie.director}}</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
         <script src="app.js"></script>
