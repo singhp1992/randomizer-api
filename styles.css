@@ -5,14 +5,15 @@ body {
 
 .container {
     max-width: 80%;
-    margin: auto;
+    margin: 100px auto;
     min-height: initial;
     position: relative;
+    height: 1500px;
 }
 
-.container>div {
+/* .container>div {
     padding-bottom: 30px;
-}
+} */
 
 h3 {
     cursor: pointer;
@@ -20,6 +21,30 @@ h3 {
 }
 
 p {
+    color: #333;
+}
+
+.menu {
+    overflow: hidden;
+    background-color: #f4f4f4;
+     -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.07);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    display: inline-flex;
+}
+
+.menu h1 {
+    margin-left: 20px; 
+    margin-right: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
     color: #333;
 }
 
@@ -77,9 +102,9 @@ li.streaming {
 }
 
 select {
-    position: absolute;
+    position: right;
     right: 0;
-    top: 5px;
+    top: 30px;
     -webkit-appearance: button;
     -webkit-border-radius: 2px;
     -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
@@ -98,4 +123,5 @@ select {
     white-space: nowrap;
     width: 300px;
     outline: none;
+    z-index: 1;
 }
