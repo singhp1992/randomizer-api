@@ -23,7 +23,7 @@ const movie = [
     {
         title: 'Planet Earth II',
         description: "Hours of beautiful but heart attack-inducing nature footage",
-        genre: 'streaming video',
+        genre: 'Documentary',
         producer: 'David Attenborough',
         showDetail: false,
     },
