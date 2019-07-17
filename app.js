@@ -55,5 +55,6 @@ const app = new Vue({
             return genres;
         }
     }
-});
+},
+);
 
