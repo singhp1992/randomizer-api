@@ -82,3 +82,33 @@ new Vue({
         ]
     }
 })
+
+new Vue(
+    {
+        el: '#categories',
+        data: {
+            title: 'Movie Library',
+            movieList: movie,
+            genre: ''
+        },
+        methods: {
+            toggleDetails: function (movie) {
+                movie.showDetail = !movie.showDetail
+            },
+            filterList: function () {
+                this.genre = event.target.value;
+            }
+        },
+        computed: {
+            uniqueItemsList: function () {
+                const genres = [];
+                this.movieList.forEach((item) => {
+                    if (!genres.includes(item.genre)) {
+                        genres.push(item.genre);
+                    }
+                });
+                return genres;
+            }
+        }
+    },
+);

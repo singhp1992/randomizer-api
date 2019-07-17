@@ -47,12 +47,14 @@
                     <option v-for="item in uniqueItemsList">{{ item }}</option>
                 </select>
                 <ul>
-                    <li v-show="genre === '' || genre === movie.genre" v-for="movie in movieList"
-                        v-on:click="toggleDetails(movie)" v-bind:class="[movie.showDetail ? 'less': 'more', movie.genre]">
+                    <li v-show="genre === '' || genre === movie.genre" 
+                        v-for="movie in movieList"
+                        v-on:click="toggleDetails(movie)" 
+                        v-bind:class="[movie.showDetail ? 'less': 'more', movie.genre]">
                         <h3>{{movie.title}}</h3>
                         <div v-show="movie.showDetail">
                             <p>{{movie.description}}</p>
-                            <p v-if="movie.director" class="byline">By: {{movie.director}}</p>
+                            <p v-if="movie.director" class="byline">Director: {{movie.director}}</p>
                         </div>
                     </li>
                 </ul>
