@@ -7,10 +7,10 @@ const movie = [
         showDetail: false,
     },
     {
-        title: 'The Joy of Painting',
-        description: "Create a world of happy little trees!",
-        type: 'DVD',
-        producer: 'Bob Ross',
+        title: 'Silence of the Lambs',
+        description: "Crazy Cannibal",
+        type: 'Horror',
+        producer: 'Ron Bozman',
         showDetail: false
     },
     {
