@@ -70,7 +70,8 @@ new Vue({
     data: {
         posts: [
             { id: 1, title: 'Home' },
-            { id: 2, title: 'Random' }
+            { id: 2, title: 'Categories' },
+            { id: 3, title: 'Random' }
         ]
     }
 })
