@@ -55,7 +55,7 @@
                         <div v-show="movie.showDetail">
                             <p>{{movie.description}}</p>
                             <p>Rating: {{ movie.rating}}</p>
-                            <img v-for="img in images" v-bind:src="img"/>
+                            <img class="img-details" v-for="img in images" v-bind:src="img"/>
                             <p v-if="movie.director" class="byline">Director: {{movie.director}}</p>
                         </div>
                     </li>

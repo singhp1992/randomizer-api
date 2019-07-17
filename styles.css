@@ -82,6 +82,11 @@ a:visited {
     color: #333;
 }
 
+.img-details {
+    width: 250px;
+    height: 250px;
+}
+
 .more:after {
     content: "\25BC";
     font-size: 8px;
