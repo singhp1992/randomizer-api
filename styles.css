@@ -10,7 +10,6 @@ body {
     position: relative;
     /* height just for scrolling */
     height: 1500px;
-    z-index: 1;
 }
 
 /* .container>div {
@@ -27,9 +26,8 @@ p {
 }
 
 .menu {
-    overflow: hidden;
     background-color: #f4f4f4;
-     -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.07);
+    -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.07);
     position: fixed;
     top: 0;
     width: 100%;
@@ -51,6 +49,7 @@ p {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     font-weight: bold;
+    z-index: 9999;
 }
 
 .categories-content {
@@ -60,7 +59,6 @@ p {
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
 }
 
 .categories-content a {
