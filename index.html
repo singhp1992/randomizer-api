@@ -15,11 +15,13 @@
     <div class="menu">
         <h1><a href="index.html">Home</a></h1>
         <h1><a href="">Random</a></h1>
+        <h1><a href="">Categories</a></h1>
     </div>
     <div class="container">
         <div id="movie-list">
              <select v-on:change="filterList">
-                 <option value="">Sort by genre ...</option>
+                 <!-- change to sort alphabetically // need to change functionality  -->
+                 <option value="">Sort alphabetically</option>
                  <option v-for="item in uniqueItemsList">{{ item }}</option>
              </select>
             <ul>
