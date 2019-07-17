@@ -58,3 +58,20 @@ const app = new Vue(
         }
     },
 );
+
+
+Vue.component('nav-bar', {
+    props: ['title'],
+    template: '<a>{{ title }}</a>'
+})
+
+new Vue({
+    el: '#menu',
+    data: {
+        posts: [
+            { id: 1, title: 'Home' },
+            { id: 2, title: 'Categories' },
+            { id: 3, title: 'Random' }
+        ]
+    }
+})
