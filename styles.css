@@ -26,19 +26,21 @@ p {
 }
 
 .menu {
-    background-color: #f4f4f4;
-    -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.07);
+    background-color: #424141;
+    -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.07);
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 10;
     display: inline-flex;
+    margin-left: -10px;
 }
 
 .menu a,
 .genres {
     margin-left: 20px; 
     margin-right: 20px;
+    color: white;
 }
 
 .genres,
@@ -79,7 +81,11 @@ a {
 }
 
 a:visited {
-    color: #333;
+    color: rgb(255, 255, 255);
+}
+
+a:hover {
+    color: #d1d0d0;
 }
 
 .img-details {
