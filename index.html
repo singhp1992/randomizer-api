@@ -16,8 +16,13 @@
 
 
 
-    <div id="nav-bar" class="menu">
-        <menu-item></menu-item>
+    <div id="menu" class="menu">
+        <nav-bar v-for="post in posts" v-bind:key="post.id" v-bind:title="post.title"></nav-bar>
+       
+       
+       
+        <!-- <menu-item name="Home"></menu-item>
+        <menu-item name="Random"></menu-item> -->
         <!-- <div id="genre" class="genres">Genres
             <div class="genres-content" v-on:change="filterList">
                 <a href="#" v-for="item in uniqueItemsList">{{ item }}</a>
@@ -25,7 +30,7 @@
                 <a href="#">Director</a> -->
             <!-- </div>
         </div> --> 
-        <h1><a href="random.html">Random</a></h1>
+        <!-- <h1><a href="random.html">Random</a></h1> -->
     </div>
     <div class="container">
         <div id="movie-list">

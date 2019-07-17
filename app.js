@@ -59,15 +59,19 @@ const app = new Vue(
     },
 );
 
-Vue.component('menu-item', {
-    data: function () {
-        return {
-            name: 'Home'
-        }
-    },
-    template: ' <h1><a href="index.html">{{ name }}</a></h1>'
+
+Vue.component('nav-bar', {
+    props: ['title'],
+    template: '<h1><a>{{ title }}</a></h1>'
 })
 
-new Vue({ 
-    el: '#nav-bar' 
+new Vue({
+    el: '#menu',
+    data: {
+        posts: [
+            { id: 1, title: 'Home' },
+            { id: 2, title: 'Categories' },
+            { id: 3, title: 'Random' }
+        ]
+    }
 })
