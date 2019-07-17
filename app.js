@@ -48,7 +48,9 @@ const app = new Vue(
         data: {
             title: 'Movie Library',
             movieList: movie,
-            rating: ''
+            rating: '',
+            images: ['https://m.media-amazon.com/images/M/MV5BMTg2MzI1MTg3OF5BMl5BanBnXkFtZTgwNTU3NDA2MTI@._V1_SX300.jpg',
+],
         },
         methods: {
             toggleDetails: function (movie) {
