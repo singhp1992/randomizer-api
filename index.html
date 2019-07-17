@@ -15,12 +15,12 @@
         <div id="movie-list">
             <h1>{{ title }}</h1>
             <select v-on:change="filterList">
-                <option value="">Select a type of movie...</option>
+                <option value="">Select a movie...</option>
                 <option v-for="item in uniqueItemsList">{{ item }}</option>
             </select>
             <ul>
-                <li v-show="type === '' || type === movie.type" v-for="movie in movieList"
-                    v-on:click="toggleDetails(movie)" v-bind:class="[movie.showDetail ? 'less': 'more', movie.type]">
+                <li v-show="genre === '' || genre === movie.genre" v-for="movie in movieList"
+                    v-on:click="toggleDetails(movie)" v-bind:class="[movie.showDetail ? 'less': 'more', movie.genre]">
                     <h3>{{movie.title}}</h3>
                     <div v-show="movie.showDetail">
                         <p>{{movie.description}}</p>

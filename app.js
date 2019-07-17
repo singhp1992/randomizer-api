@@ -2,63 +2,63 @@ const movie = [
     {
         title: 'The Lion King',
         description: "A delightful children's movie.",
-        type: 'Family',
+        genre: 'Family',
         producer: 'Karen Gilchrist',
         showDetail: false,
     },
     {
         title: 'Silence of the Lambs',
         description: "Crazy Cannibal",
-        type: 'Horror',
+        genre: 'Horror',
         producer: 'Ron Bozman',
         showDetail: false
     },
     {
         title: 'Supernatural: The Complete 12th Season',
         description: "A (literally) neverending roadtrip.",
-        type: 'DVD',
+        genre: 'DVD',
         producer: "",
         showDetail: false
     },
     {
         title: 'Planet Earth II',
         description: "Hours of beautiful but heart attack-inducing nature footage",
-        type: 'streaming video',
+        genre: 'streaming video',
         producer: 'David Attenborough',
         showDetail: false,
     },
     {
         title: 'Titanic',
         description: "The boat sinks.",
-        type: 'DVD',
+        genre: 'DVD',
         producer: 'James Cameron',
         showDetail: false,
     },
     {
         title: 'The Sirens of Titan',
         description: "Mankind flung its advance agents ever outward, ever outward... it flung them like stones.",
-        type: 'book',
+        genre: 'book',
         producer: 'Kurt Vonnegut',
         showDetail: false,
     },
     {
         title: 'Better Call Saul',
         description: "A slow-burning Breaking Bad prequel.",
-        type: 'streaming video',
+        genre: 'streaming video',
         producer: '',
         showDetail: false,
     },
     {
         title: 'Title 1',
         description: "A slow-burning Breaking Bad prequel.",
-        type: 'e-book',
+        genre: 'e-book',
         producer: '',
         showDetail: false,
     },
     {
         title: 'Title 2',
         description: "A slow-burning Breaking Bad prequel.",
-        type: 'e-book',
+        genre: 'e-book',
         producer: '',
         showDetail: false,
     }
@@ -69,25 +69,25 @@ const app = new Vue({
     data: {
         title: 'Treehouse Public Library',
         movieList: movie,
-        type: ''
+        genre: ''
     },
     methods: {
         toggleDetails: function (movie) {
             movie.showDetail = !movie.showDetail
         },
         filterList: function () {
-            this.type = event.target.value;
+            this.genre = event.target.value;
         }
     },
     computed: {
         uniqueItemsList: function () {
-            const types = [];
+            const genres = [];
             this.movieList.forEach((item) => {
-                if (!types.includes(item.type)) {
-                    types.push(item.type);
+                if (!genres.includes(item.genre)) {
+                    genres.push(item.genre);
                 }
             });
-            return types;
+            return genres;
         }
     }
 });
