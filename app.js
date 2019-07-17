@@ -1,4 +1,4 @@
-const media = [
+const movie = [
     {
         title: 'Hop on Pop',
         description: "A delightful children's book.",
@@ -65,15 +65,15 @@ const media = [
 ]
 
 const app = new Vue({
-    el: '#media-list',
+    el: '#movie-list',
     data: {
         title: 'Treehouse Public Library',
-        mediaList: media,
+        movieList: movie,
         type: ''
     },
     methods: {
-        toggleDetails: function (media) {
-            media.showDetail = !media.showDetail
+        toggleDetails: function (movie) {
+            movie.showDetail = !movie.showDetail
         },
         filterList: function () {
             this.type = event.target.value;
@@ -82,7 +82,7 @@ const app = new Vue({
     computed: {
         uniqueItemsList: function () {
             const types = [];
-            this.mediaList.forEach((item) => {
+            this.movieList.forEach((item) => {
                 if (!types.includes(item.type)) {
                     types.push(item.type);
                 }
