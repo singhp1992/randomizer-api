@@ -3,7 +3,7 @@ const movie = [
         title: 'The Lion King',
         description: "A delightful children's movie.",
         type: 'Family',
-        producer: 'Dr. Suess',
+        producer: 'Karen Gilchrist',
         showDetail: false,
     },
     {
