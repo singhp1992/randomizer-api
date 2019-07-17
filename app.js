@@ -59,12 +59,7 @@ const app = new Vue(
     },
 );
 
-Vue.component('nav-bar', {
-    template:' <div> id="genre" class="genres" </div>',
-    data: function () {
-        return {
-            count: 0
-        }
-    },
-    template: '<button v-on:click="count++">You clicked me {{ count }} times.</button>'
+Vue.component('work', {
+    template:'<p> Hello </p>',
 })
+
