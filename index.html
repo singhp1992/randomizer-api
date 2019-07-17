@@ -19,7 +19,6 @@
     <div class="container">
         <div id="movie-list">
              <select v-on:change="filterList">
-                 <!-- need to create another component / app for the item part (it works in the movie list div) -->
                  <option value="">Sort by genre ...</option>
                  <option v-for="item in uniqueItemsList">{{ item }}</option>
              </select>
