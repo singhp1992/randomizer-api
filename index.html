@@ -17,7 +17,7 @@
 
 
     <div id="menu" class="menu">
-        <nav-bar v-for="post in posts" v-bind:key="post.id" v-bind:title="post.title"></nav-bar>
+        <nav-bar :href="post.title + '.html'" v-for="post in posts" v-bind:key="post.id" v-bind:title="post.title"></nav-bar>
        
        
        
