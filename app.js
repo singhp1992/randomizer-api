@@ -7,6 +7,13 @@ const movie = [
         showDetail: false,
     },
     {
+        title: 'The Lion King II',
+        description: "A delightful children's movie.",
+        genre: 'Family',
+        director: 'Karen Gilchrist',
+        showDetail: false,
+    },
+    {
         title: 'Silence of the Lambs',
         description: "Crazy Cannibal",
         genre: 'Horror',
@@ -75,3 +82,33 @@ new Vue({
         ]
     }
 })
+
+new Vue(
+    {
+        el: '#categories',
+        data: {
+            title: 'Movie Library',
+            movieList: movie,
+            genre: ''
+        },
+        methods: {
+            toggleDetails: function (movie) {
+                movie.showDetail = !movie.showDetail
+            },
+            filterList: function () {
+                this.genre = event.target.value;
+            }
+        },
+        computed: {
+            uniqueItemsList: function () {
+                const genres = [];
+                this.movieList.forEach((item) => {
+                    if (!genres.includes(item.genre)) {
+                        genres.push(item.genre);
+                    }
+                });
+                return genres;
+            }
+        }
+    },
+);

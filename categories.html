@@ -16,7 +16,18 @@
             <nav-bar :href="post.title.toLowerCase() + '.html'" v-for="post in posts" v-bind:key="post.id" v-bind:title="post.title"></nav-bar>
         </div>
         <div class="container">
-
+            <div id="categories">
+                <ul>
+                    <li v-show="genre === '' || genre === movie.genre" 
+                        v-for="movie in movieList" v-on:click="toggleDetails(movie)" 
+                        v-bind:class="[movie.showDetail ? 'less': 'more', movie.genre]">
+                        <h3>{{movie.genre}}</h3>
+                        <div v-show="movie.showDetail">
+                            <p>{{movie.title}}</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
         <script src="app.js"></script>
