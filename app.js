@@ -32,7 +32,7 @@ const movie = [
 const app = new Vue({
     el: '#movie-list',
     data: {
-        title: 'Treehouse Public Library',
+        title: 'Movie Library',
         movieList: movie,
         genre: ''
     },
