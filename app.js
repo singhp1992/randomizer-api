@@ -30,7 +30,7 @@ const movie = [
     {
         title: 'Titanic',
         description: "The boat sinks.",
-        genre: 'DVD',
+        genre: 'Romance',
         producer: 'James Cameron',
         showDetail: false,
     },
