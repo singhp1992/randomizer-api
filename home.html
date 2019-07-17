@@ -41,8 +41,9 @@
 
         <div class="container">
             <div id="movie-list">
-                <select v-on:change="filterList">
-                    <option value="">Sort by Genre</option>
+                Sort by Genre:  
+                <select v-on:change="filterList"> 
+                    <option value="">All</option>
                     <option v-for="item in uniqueItemsList">{{ item }}</option>
                 </select>
                 <ul>

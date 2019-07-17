@@ -7,6 +7,13 @@ const movie = [
         showDetail: false,
     },
     {
+        title: 'The Lion King II',
+        description: "A delightful children's movie.",
+        genre: 'Family',
+        director: 'Karen Gilchrist',
+        showDetail: false,
+    },
+    {
         title: 'Silence of the Lambs',
         description: "Crazy Cannibal",
         genre: 'Horror',

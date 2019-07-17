@@ -25,7 +25,7 @@
                     <li v-show="genre === '' || genre === movie.genre" v-for="movie in movieList" v-on:click="toggleDetails(movie)" v-bind:class="[movie.showDetail ? 'less': 'more', movie.genre]">
                         <h3>{{movie.genre}}</h3>
                         <div v-show="movie.showDetail">
-                            <p>{{movie.description}}</p>
+                            <p>{{movie.title}}</p>
                             <p v-if="movie.director" class="byline">By: {{movie.director}}</p>
                         </div>
                     </li>
