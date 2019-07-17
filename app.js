@@ -59,7 +59,15 @@ const app = new Vue(
     },
 );
 
-Vue.component('work', {
-    template:'<p> Hello </p>',
+Vue.component('menu-item', {
+    data: function () {
+        return {
+            name: 'Home'
+        }
+    },
+    template: ' <h1><a href="index.html">{{ name }}</a></h1>'
 })
 
+new Vue({ 
+    el: '#nav-bar' 
+})
