@@ -12,10 +12,6 @@
 </head>
 
 <body>
-
-
-
-
     <div id="menu" class="menu">
         <nav-bar :href="post.title.toLowerCase() + '.html'" v-for="post in posts" v-bind:key="post.id" v-bind:title="post.title"></nav-bar>
        

@@ -12,16 +12,8 @@
 </head>
 
 <body>
-    <div class="menu">
-        <h1><a href="home.html">Home</a></h1>
-        <div class="genres">Genres
-            <div class="genres-content">
-                <a href="#">Genre</a>
-                <a href="#">Date Release</a>
-                <a href="#">Director</a>
-            </div>
-        </div>
-        <h1><a href="">Random</a></h1>
+    <div id="menu" class="menu">
+        <nav-bar :href="post.title.toLowerCase() + '.html'" v-for="post in posts" v-bind:key="post.id" v-bind:title="post.title"></nav-bar>
     </div>
     <div class="container">
        

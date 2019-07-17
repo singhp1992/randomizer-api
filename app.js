@@ -74,25 +74,3 @@ new Vue({
         ]
     }
 })
-
-
-new Vue({
-    el: '#genre',
-    data: {
-        title: 'Movie Library',
-        movieList: movie,
-        genre: ''
-    },
-    computed: {
-        uniqueItemsList: function () {
-            const genres = [];
-            this.movieList.forEach((item) => {
-                if (!genres.includes(item.genre)) {
-                    genres.push(item.genre);
-                }
-            });
-            return genres;
-            console.log(genres)
-        }
-    }
-})
