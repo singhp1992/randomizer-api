@@ -10,9 +10,9 @@ body {
     position: relative;
 }
 
-.container>div {
+/* .container>div {
     padding-bottom: 30px;
-}
+} */
 
 h3 {
     cursor: pointer;
