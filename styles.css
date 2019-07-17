@@ -97,7 +97,7 @@ li.streaming {
 }
 
 select {
-    /* position: absolute; */
+    position: right;
     right: 0;
     top: 30px;
     -webkit-appearance: button;
