@@ -36,12 +36,12 @@ p {
 }
 
 .menu h1,
-.categories {
+.genres {
     margin-left: 20px; 
     margin-right: 20px;
 }
 
-.categories {
+.genres {
     display: block;
     font-size: 2em;
     color: #333;
@@ -53,7 +53,7 @@ p {
     z-index: 9999;
 }
 
-.categories-content {
+.genres-content {
     font-size: 16px;
     display: none;
     position: absolute;
@@ -62,14 +62,14 @@ p {
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
-.categories-content a {
+.genres-content a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
 
-.categories:hover .categories-content {
+.genres:hover .genres-content {
     display: block;
 }
 
