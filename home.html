@@ -19,7 +19,12 @@
     <div id="menu" class="menu">
         <nav-bar :href="post.title.toLowerCase() + '.html'" v-for="post in posts" v-bind:key="post.id" v-bind:title="post.title"></nav-bar>
        
-       
+        <!-- <div id="genre" class="genres">
+            <select v-on:change="filterList">
+                <option value="">Genres</option>
+                <option v-for="item in uniqueItemsList">{{ item }}</option>
+            </select>
+        </div> -->
        
         <!-- <menu-item name="Home"></menu-item>
         <menu-item name="Random"></menu-item> -->
@@ -32,11 +37,11 @@
         </div> --> 
         <!-- <h1><a href="random.html">Random</a></h1> -->
     </div>
+
     <div class="container">
         <div id="movie-list">
              <select v-on:change="filterList">
-                 <!-- change to sort alphabetically // need to change functionality  -->
-                 <option value="">Sort alphabetically</option>
+                 <option value="">Sort by Category</option>
                  <option v-for="item in uniqueItemsList">{{ item }}</option>
              </select>
             <ul>
