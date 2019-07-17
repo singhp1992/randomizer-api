@@ -14,13 +14,6 @@ const movie = [
         showDetail: false
     },
     {
-        title: 'Supernatural: The Complete 12th Season',
-        description: "A (literally) neverending roadtrip.",
-        genre: 'DVD',
-        producer: "",
-        showDetail: false
-    },
-    {
         title: 'Planet Earth II',
         description: "Hours of beautiful but heart attack-inducing nature footage",
         genre: 'Documentary',
@@ -32,20 +25,6 @@ const movie = [
         description: "The boat sinks.",
         genre: 'Romance',
         producer: 'James Cameron',
-        showDetail: false,
-    },
-    {
-        title: 'The Sirens of Titan',
-        description: "Mankind flung its advance agents ever outward, ever outward... it flung them like stones.",
-        genre: 'book',
-        producer: 'Kurt Vonnegut',
-        showDetail: false,
-    },
-    {
-        title: 'Better Call Saul',
-        description: "A slow-burning Breaking Bad prequel.",
-        genre: 'streaming video',
-        producer: '',
         showDetail: false,
     }
 ]
