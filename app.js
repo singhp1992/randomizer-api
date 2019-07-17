@@ -62,7 +62,7 @@ const app = new Vue(
 
 Vue.component('nav-bar', {
     props: ['title'],
-    template: '<h1><a>{{ title }}</a></h1>'
+    template: '<a>{{ title }}</a>'
 })
 
 new Vue({
