@@ -54,6 +54,7 @@
                         <h3>{{movie.title}}</h3>
                         <div v-show="movie.showDetail">
                             <p>{{movie.description}}</p>
+                            <p>Rating: {{ movie.rating}}</p>
                             <p v-if="movie.director" class="byline">Director: {{movie.director}}</p>
                         </div>
                     </li>

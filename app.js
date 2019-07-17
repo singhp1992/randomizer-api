@@ -4,6 +4,7 @@ const movie = [
         description: "A delightful children's movie.",
         genre: 'Family',
         director: 'Karen Gilchrist',
+        rating: 'G',
         showDetail: false,
     },
     {
