@@ -121,6 +121,10 @@ ul {
     border-radius: 5px;
 }
 
+.random-button {
+    text-align: center;
+}
+
 li {
     border: #eaeaea solid 1px;
     margin: 10px 0;
