@@ -125,6 +125,10 @@ ul {
     text-align: center;
 }
 
+button {
+    background-color: #555555;
+}
+
 li {
     border: #eaeaea solid 1px;
     margin: 10px 0;
