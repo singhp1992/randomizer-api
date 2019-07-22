@@ -73,10 +73,10 @@ const app = new Vue(
     },
 );
 
-
+// Nav Bar / Menu Component
 Vue.component('nav-bar', {
-    props: ['title'],
-    template: '<a>{{ title }}</a>'
+    template: '<a>{{ title }}</a>',
+    props: ['title']
 })
 
 new Vue({
