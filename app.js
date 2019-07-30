@@ -6,6 +6,8 @@ const movie = [
         director: 'Karen Gilchrist',
         rating: 'G',
         showDetail: false,
+        // img: require('https://m.media-amazon.com/images/M/MV5BMTg2MzI1MTg3OF5BMl5BanBnXkFtZTgwNTU3NDA2MTI@._V1_SX300.jpg'),
+
     },
     {
         title: 'The Lion King II',
@@ -48,9 +50,7 @@ const app = new Vue(
             title: 'Movie Library',
             movieList: movie,
             rating: '',
-            poster: [
-                'https://m.media-amazon.com/images/M/MV5BMTg2MzI1MTg3OF5BMl5BanBnXkFtZTgwNTU3NDA2MTI@._V1_SX300.jpg'
-            ],
+            image: movie.img
         },
         methods: {
             toggleDetails: function (movie) {
