@@ -18,11 +18,13 @@
         <div class="container">
             <div id="categories" >
                 <ul v-on:change="filterList">
-                    <li v-for="item in uniqueGenre">
+                    <li v-for="item in uniqueGenre"
+                     class="more"
+                    >
                         <h3>{{item}}</h3>
-                        <!-- <div v-show="movie.showDetail">
-                            <p>{{movie.title}}</p>
-                        </div> -->
+                        <div>
+                            <p></p>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -32,12 +34,6 @@
     </body>
 </html>
 
-<!-- <option v-for="item in uniqueItemsList">{{ item }}</option>
- -->
-            <!-- <select v-on:change="filterList">
-                <option value="">All</option>
-                <option v-for="item in uniqueItemsList">{{ item }}</option>
-            </select> -->
 
              <!-- v-show="genre === '' || genre === movie.genre" v-for="item in uniqueGenre" v-on:click="toggleDetails(movie)" v-bind:class="[movie.showDetail
             ? 'less': 'more', movie.genre]" -->
