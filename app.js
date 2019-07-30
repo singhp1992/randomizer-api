@@ -1,3 +1,20 @@
+// Nav Bar / Menu Component
+Vue.component('nav-bar', {
+    template: '<a>{{ title }}</a>',
+    props: ['title']
+})
+
+new Vue({
+    el: '#menu',
+    data: {
+        posts: [
+            { id: 1, title: 'Home' },
+            { id: 2, title: 'Categories' },
+            { id: 3, title: 'Random' }
+        ]
+    }
+})
+
 const movie = [
     {
         title: 'The Lion King',
@@ -55,6 +72,7 @@ const app = new Vue(
         methods: {
             toggleDetails: function (movie) {
                 movie.showDetail = !movie.showDetail
+                
             },
             filterList: function () {
                 this.rating = event.target.value;
@@ -74,41 +92,28 @@ const app = new Vue(
     },
 );
 
-// Nav Bar / Menu Component
-Vue.component('nav-bar', {
-    template: '<a>{{ title }}</a>',
-    props: ['title']
-})
-
-new Vue({
-    el: '#menu',
-    data: {
-        posts: [
-            { id: 1, title: 'Home' },
-            { id: 2, title: 'Categories' },
-            { id: 3, title: 'Random' }
-        ]
-    }
-})
-
+//Categories Page
 new Vue(
     {
         el: '#categories',
         data: {
             title: 'Movie Library',
             movieList: movie,
-            genre: ''
+            rating: '',
+            genre: movie.genre,
+            image: movie.img
         },
         methods: {
-            toggleDetails: function (movie) {
+            toggleCategories: function (movie) {
                 movie.showDetail = !movie.showDetail
             },
+
             filterList: function () {
                 this.genre = event.target.value;
             }
         },
         computed: {
-            uniqueItemsList: function () {
+            uniqueGenre: function () {
                 const genres = [];
                 this.movieList.forEach((item) => {
                     if (!genres.includes(item.genre)) {
@@ -116,7 +121,9 @@ new Vue(
                     }
                 });
                 return genres;
+
             }
         }
     },
 );
+
