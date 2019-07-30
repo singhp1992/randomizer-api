@@ -108,15 +108,16 @@ new Vue(
             }
         },
         computed: {
-            uniqueItemsList: function () {
-                const genres = [];
-                this.movieList.forEach((item) => {
-                    if (!genres.includes(item.genre)) {
-                        genres.push(item.genre);
-                    }
-                });
-                return genres;
+                uniqueGenre: function () {
+                    const genres = [];
+                    this.movieList.forEach((item) => {
+                        if (!genres.includes(item.genre)) {
+                            genres.push(item.genre);
+                        }
+                    });
+                    return genres;
+                    
+                }
             }
-        }
     },
 );
