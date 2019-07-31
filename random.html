@@ -16,14 +16,16 @@
             <nav-bar :href="post.title.toLowerCase() + '.html'" v-for="post in posts" v-bind:key="post.id" v-bind:title="post.title"></nav-bar>
         </div>
         <div class="container" id="random">
-           <!-- <div class="random-movie" v-for="result in results">
-                <h3>Your Random Movie is... </h3>
-                <p>Title: {{ result.title }}</p>
-                <p>Description: </p>
-                <p>Rating: </p>
-            </div> -->
+           <div class="random-movie">
+                <h3>Your Random Brewery is... </h3>
+                <p>Title: {{ info.name }}</p>
+                <p>Type: {{ info.brewery_type }}</p>
+                <p>Location: {{ info.street }} </br> {{ info.state }} </p>
+                <p>Contact: +1{{ info.phone }}</p>
+                <p>Website: {{ info.website_url }}</p>
+            </div>
 
-                <div class="container" id="random">
+                <!-- <div class="container" id="random">
                     <h3 class="text-center">VueNews</h3>
                     <div class="columns medium-3" v-for="result in results">
                         <div class="card">
@@ -35,7 +37,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
             <div class="random-button">
                 <button>Another One!</button>

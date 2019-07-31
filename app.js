@@ -130,17 +130,34 @@ new Vue(
 
 // Random Page 
 
-const vm = new Vue({
+// const vm = new Vue({
+//     el: '#random',
+//     data: {
+//         results: ''
+//     },
+//     mounted() {
+//         axios.get("")
+//             .then(response => {
+//                 this.results = response.data.results
+//                 console.log(this.results)
+//             })
+//     } 
+// });
+
+new Vue({
     el: '#random',
-    data: {
-        results: []
+    data() {
+        return {
+            info: null
+        }
     },
     mounted() {
-        axios.get("https://api.randomuser.me/")
+        axios
+            .get('https://api.openbrewerydb.org/breweries/0009')
             .then(response => {
-                this.results = response.data.results
-                console.log(this.results)
+                this.info = response.data
+                console.log(this.info)
             })
-    } 
-});
 
+    }
+})
