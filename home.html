@@ -37,7 +37,7 @@
                             <p>{{movie.description}}</p>
                             <p>Rating: {{ movie.rating}}</p>
                             <!-- <img class="img-details" v-for="movie in poster" v-bind:src="movie.img"/> -->
-                            <p v-if="movie.director" class="byline">Director: </p>
+                            <p v-if="movie.director" class="byline">Director: {{movie.director}}</p>
                         </div>
                     </li>
                 </ul>
