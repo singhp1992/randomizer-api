@@ -128,3 +128,41 @@ new Vue(
     },
 );
 
+// Random Page 
+
+const vm = new Vue({
+    el: '#random',
+    data: {
+        results: []
+    },
+    mounted() {
+        axios.get("https://api.randomuser.me/?inc=gender,name,nat,email&results=3&nat=us,")
+            .then(response => {
+                this.results = response.data.results
+                console.log(this.results)
+            })
+    } 
+});
+
+// const vm = new Vue({
+//     el: '#random',
+//     data: {
+//         results: [{
+//                 title: "the very first post",
+//                 abstract: "lorem ipsum some test dimpsum"
+//             },
+//             {
+//                 title: "and then there was the second",
+//                 abstract: "lorem ipsum some test dimsum"
+//             },
+//             {
+//                 title: "third time's a charm",
+//                 abstract: "lorem ipsum some test dimsum"
+//             },
+//             {
+//                 title: "four the last time",
+//                 abstract: "lorem ipsum some test dimsum"
+//             }
+//         ]
+//     }
+// });
