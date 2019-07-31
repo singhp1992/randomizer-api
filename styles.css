@@ -10,7 +10,7 @@ body {
     min-height: initial;
     position: relative;
     /* height just for scrolling */
-    height: 1500px;
+    height: 1000px;
 }
 
 h3 {
@@ -191,6 +191,12 @@ ul {
     padding-left: 0;
     border-radius: 5px;
     width: 45%;
+}
+
+.random-movie {
+    text-align: center;
+    /* placeholder height */
+    height: 400px;
 }
 
 .random-button {
