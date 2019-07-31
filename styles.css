@@ -238,11 +238,6 @@ li.streaming {
     border-left: #a0f2d0 solid 5px;
 }
 
-.byline {
-    font-size: 14px;
-    font-style: italic;
-}
-
 select {
     position: right;
     right: 0;

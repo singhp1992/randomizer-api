@@ -38,9 +38,10 @@
                         v-bind:class="[brewery.showDetail ? 'less': 'more', brewery.state]">
                         <h3>{{brewery.title}}</h3>
                         <div v-show="brewery.showDetail">
-                            <p>{{brewery.description}}</p>
-                            <p>State: {{ brewery.state}}</p>
-                            <p v-if="brewery.director" class="byline">Director: {{brewery.director}}</p>
+                            <p>Type: {{ brewery.type }}</p>
+                            <p>Location: {{ brewery.address }}, {{ brewery.city }}, {{ brewery.state }}</p>
+                            <p>Contact: {{ brewery.phone }}</p>
+                            <p>Website: {{ brewery.website_url }}</p>
                         </div>
                     </li>
                 </ul>

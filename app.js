@@ -17,43 +17,53 @@ new Vue({
 
 const brewery = [
     {
-        title: 'The Lion King',
-        description: "A delightful children's movie.",
-        genre: 'Micro',
-        director: 'Karen Gilchrist',
+        title: 'Free State Brewery',
+        type: 'Micro',
+        address: '1234 Happy Street',
+        city: 'Springfield',
         state: 'Kansas',
+        phone: '01234567',
+        website_url: 'http://www.beer.com',
         showDetail: false,
     },
     {
-        title: 'The Lion King II',
-        description: "A delightful children's movie.",
-        genre: 'Planning',
-        director: 'Karen Gilchrist',
+        title: 'Avondale Brewing Co',
+        type: 'Planning',
+        address: '1234 Happy Street',
+        city: 'Springfield',
         state: 'Missouri',
+        phone: '01234567',
+        website_url: 'http://www.beer.com',
         showDetail: false,
     },
     {
-        title: 'Silence of the Lambs',
-        description: "Crazy Cannibal",
-        genre: 'Regional',
-        director: 'Ron Bozman',
+        title: 'DogFish',
+        type: 'Regional',
+        address: '1234 Happy Street',
+        city: 'Springfield',
         state: 'Oklahoma',
+        phone: '01234567',
+        website_url: 'http://www.beer.com',
         showDetail: false
     },
     {
-        title: 'Planet Earth II',
-        description: "Hours of beautiful but heart attack-inducing nature footage",
-        genre: 'Micro',
-        director: 'David Attenborough',
+        title: 'Coors',
+        type: 'Micro',
+        address: '1234 Happy Street',
+        city: 'Springfield',
         state: 'Texas',
+        phone: '01234567',
+        website_url: 'http://www.beer.com',
         showDetail: false,
     },
     {
-        title: 'Titanic',
-        description: "The boat sinks.",
-        genre: 'Planning',
-        director: 'James Cameron',
+        title: 'Heineken',
+        type: 'Planning',
+        address: '1234 Happy Street',
+        city: 'Springfield',
         state: 'California',
+        phone: '01234567',
+        website_url: 'http://www.beer.com',
         showDetail: false,
     }
 ]
@@ -97,7 +107,7 @@ new Vue(
             title: 'Brewery Library',
             breweryList: brewery,
             state: '',
-            genre: brewery.genre,
+            type: brewery.type,
         },
         methods: {
             toggleCategories: function (brewery) {
@@ -105,18 +115,18 @@ new Vue(
             },
 
             filterList: function () {
-                this.genre = event.target.value;
+                this.type = event.target.value;
             }
         },
         computed: {
-            uniqueGenre: function () {
-                const genres = [];
+            uniqueType: function () {
+                const types = [];
                 this.breweryList.forEach((item) => {
-                    if (!genres.includes(item.genre)) {
-                        genres.push(item.genre);
+                    if (!types.includes(item.type)) {
+                        types.push(item.type);
                     }
                 });
-                return genres;
+                return types;
 
             }
         }
