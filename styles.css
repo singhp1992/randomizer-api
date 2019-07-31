@@ -200,7 +200,7 @@ ul {
 .random-brewery {
     padding-top: 50px;
     text-align: center;
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
     /* placeholder height */
     height: 300px;
 }

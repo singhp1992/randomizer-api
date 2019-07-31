@@ -133,11 +133,11 @@ new Vue({
     },
     mounted() {
         axios
-            .get('https://api.openbrewerydb.org/breweries/0009')
+            .get('https://api.openbrewerydb.org/breweries?page=1&per_page=10')
             .then(response => {
                 this.info = response.data
+                console.log(this.info[0])
             })
-
     }
 })
 
@@ -159,3 +159,5 @@ new Vue({
 })
 
 // multiples: https://api.openbrewerydb.org/breweries?page=1&per_page=20
+
+// by category (type) https://api.openbrewerydb.org/breweries?by_type=micro

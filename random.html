@@ -8,7 +8,7 @@
         <link rel="shortcut icon" type="image/png" href="images/beer.png" />
         <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles.css">
-        <title>Movie Library</title>
+        <title>Brewery Library</title>
     </head>
 
     <body>
@@ -23,11 +23,11 @@
         </div>
         <div class="container" id="random">
                 <div class="random-brewery">
-                    <p>Title: {{ info.name }}</p>
-                    <p>Type: {{ info.brewery_type }}</p>
-                    <p>Location: {{ info.street }} </br> {{ info.state }} </p>
-                    <p>Contact: +1 {{ info.phone }}</p>
-                    <p>Website: {{ info.website_url }}</p>
+                    <p>Title: {{ info[1].name }}</p>
+                    <p>Type: {{ info[1].brewery_type }}</p>
+                    <p>Location: {{ info[1].street }} </br> {{ info[1].state }} </p>
+                    <p>Contact: +1 {{ info[1].phone }}</p>
+                    <p>Website: {{ info[1].website_url }}</p>
                 </div>
             <div class="random-button">
                 <button>Another One!</button>
