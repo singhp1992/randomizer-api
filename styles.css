@@ -197,10 +197,12 @@ ul {
     width: 45%;
 }
 
-.random-movie {
+.random-brewery {
+    padding-top: 50px;
     text-align: center;
+    text-transform: capitalize;
     /* placeholder height */
-    height: 400px;
+    height: 300px;
 }
 
 .random-button {
@@ -214,6 +216,7 @@ button {
     height: 50px;
     font-size: 16px;
     -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.07);
+    cursor: pointer;
 }
 
 li {
