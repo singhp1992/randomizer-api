@@ -76,6 +76,7 @@ p {
 }
 
 .welcome-button {
+    margin-top: 120px;
     font-size: 30px;
     text-align: center;
     color: white;
