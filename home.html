@@ -21,8 +21,10 @@
             </nav-bar>
         </div>
 
-        <div class="container" id="all">
-            <p>practice here: {{ apicall[0].city }}</p>
+        <div class="container">
+            <div id="all">
+                <p>practice here: {{ apicall[0].city }}</p>
+            </div>
             <div id="brewery-list">
                 Sort by State:  
                 <select v-on:change="filterList"> 

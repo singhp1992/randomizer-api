@@ -153,7 +153,6 @@ new Vue({
             .get('https://api.openbrewerydb.org/breweries?page=1&per_page=20')
             .then(response => {
                 this.apicall = response.data
-                console.log(this.apicall[3])
             })
 
     }
