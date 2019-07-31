@@ -144,26 +144,3 @@ const vm = new Vue({
     } 
 });
 
-// other api that works: https://api.nytimes.com/svc/books/v3/lists/names.json?api-key=4n5lE5ZwsDm25Ly8WGEovwlz4RulFzbt
-// const vm = new Vue({
-//     el: '#random',
-//     data: {
-//         results: [{
-//                 title: "the very first post",
-//                 abstract: "lorem ipsum some test dimpsum"
-//             },
-//             {
-//                 title: "and then there was the second",
-//                 abstract: "lorem ipsum some test dimsum"
-//             },
-//             {
-//                 title: "third time's a charm",
-//                 abstract: "lorem ipsum some test dimsum"
-//             },
-//             {
-//                 title: "four the last time",
-//                 abstract: "lorem ipsum some test dimsum"
-//             }
-//         ]
-//     }
-// });
