@@ -8,7 +8,7 @@
         <link rel="shortcut icon" type="image/png" href="images/popcorn.png" />
         <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles.css">
-        <title>Movie Library</title>
+        <title>Brewery Library</title>
     </head>
     <body>
         <div id="menu" class="menu">
@@ -22,23 +22,22 @@
         </div>
 
         <div class="container">
-            <div id="movie-list">
+            <div id="brewery-list">
                 Sort by State:  
                 <select v-on:change="filterList"> 
                     <option value="">All</option>
                     <option v-for="item in uniqueItemsList">{{ item }}</option>
                 </select>
                 <ul>
-                    <li v-show="state === '' || state === movie.state" 
-                        v-for="movie in movieList"
-                        v-on:click="toggleDetails(movie)" 
-                        v-bind:class="[movie.showDetail ? 'less': 'more', movie.state]">
-                        <h3>{{movie.title}}</h3>
-                        <div v-show="movie.showDetail">
-                            <p>{{movie.description}}</p>
-                            <p>State: {{ movie.state}}</p>
-                            <!-- <img class="img-details" v-for="movie in poster" v-bind:src="movie.img"/> -->
-                            <p v-if="movie.director" class="byline">Director: {{movie.director}}</p>
+                    <li v-show="state === '' || state === brewery.state" 
+                        v-for="brewery in breweryList"
+                        v-on:click="toggleDetails(brewery)" 
+                        v-bind:class="[brewery.showDetail ? 'less': 'more', brewery.state]">
+                        <h3>{{brewery.title}}</h3>
+                        <div v-show="brewery.showDetail">
+                            <p>{{brewery.description}}</p>
+                            <p>State: {{ brewery.state}}</p>
+                            <p v-if="brewery.director" class="byline">Director: {{brewery.director}}</p>
                         </div>
                     </li>
                 </ul>

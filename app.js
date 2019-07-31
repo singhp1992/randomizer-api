@@ -15,7 +15,7 @@ new Vue({
     }
 })
 
-const movie = [
+const brewery = [
     {
         title: 'The Lion King',
         description: "A delightful children's movie.",
@@ -23,8 +23,6 @@ const movie = [
         director: 'Karen Gilchrist',
         state: 'Kansas',
         showDetail: false,
-        // img: require('https://m.media-amazon.com/images/M/MV5BMTg2MzI1MTg3OF5BMl5BanBnXkFtZTgwNTU3NDA2MTI@._V1_SX300.jpg'),
-
     },
     {
         title: 'The Lion King II',
@@ -62,16 +60,15 @@ const movie = [
 
 const app = new Vue(
     {
-        el: '#movie-list',
+        el: '#brewery-list',
         data: {
-            title: 'Movie Library',
-            movieList: movie,
+            title: 'Brewery Library',
+            breweryList: brewery,
             state: '',
-            image: movie.img
         },
         methods: {
-            toggleDetails: function (movie) {
-                movie.showDetail = !movie.showDetail
+            toggleDetails: function (brewery) {
+                brewery.showDetail = !brewery.showDetail
                 
             },
             filterList: function () {
@@ -81,7 +78,7 @@ const app = new Vue(
         computed: {
             uniqueItemsList: function () {
                 const states = [];
-                this.movieList.forEach((item) => {
+                this.breweryList.forEach((item) => {
                     if (!states.includes(item.state)) {
                         states.push(item.state);
                     }
@@ -97,15 +94,14 @@ new Vue(
     {
         el: '#categories',
         data: {
-            title: 'Movie Library',
-            movieList: movie,
+            title: 'Brewery Library',
+            breweryList: brewery,
             state: '',
-            genre: movie.genre,
-            image: movie.img
+            genre: brewery.genre,
         },
         methods: {
-            toggleCategories: function (movie) {
-                movie.showDetail = !movie.showDetail
+            toggleCategories: function (brewery) {
+                brewery.showDetail = !brewery.showDetail
             },
 
             filterList: function () {
@@ -115,7 +111,7 @@ new Vue(
         computed: {
             uniqueGenre: function () {
                 const genres = [];
-                this.movieList.forEach((item) => {
+                this.breweryList.forEach((item) => {
                     if (!genres.includes(item.genre)) {
                         genres.push(item.genre);
                     }
