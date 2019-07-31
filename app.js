@@ -8,86 +8,92 @@ new Vue({
     el: '#menu',
     data: {
         posts: [
-            { id: 2, title: 'Movie Library' },
-            { id: 2, title: 'Home' },
-            { id: 3, title: 'Categories' },
-            { id: 4, title: 'Random' }
+            { id: 1, title: 'Home' },
+            { id: 2, title: 'Categories' },
+            { id: 3, title: 'Random' }
         ]
     }
 })
 
-const movie = [
+const brewery = [
     {
-        title: 'The Lion King',
-        description: "A delightful children's movie.",
-        genre: 'Family',
-        director: 'Karen Gilchrist',
-        rating: 'G',
-        showDetail: false,
-        // img: require('https://m.media-amazon.com/images/M/MV5BMTg2MzI1MTg3OF5BMl5BanBnXkFtZTgwNTU3NDA2MTI@._V1_SX300.jpg'),
-
-    },
-    {
-        title: 'The Lion King II',
-        description: "A delightful children's movie.",
-        genre: 'Family',
-        director: 'Karen Gilchrist',
-        rating: 'G',
+        title: 'Free State Brewery',
+        type: 'Micro',
+        address: '1234 Happy Street',
+        city: 'Springfield',
+        state: 'Kansas',
+        phone: '01234567',
+        website_url: 'http://www.beer.com',
         showDetail: false,
     },
     {
-        title: 'Silence of the Lambs',
-        description: "Crazy Cannibal",
-        genre: 'Horror',
-        director: 'Ron Bozman',
-        rating: 'R',
+        title: 'Avondale Brewing Co',
+        type: 'Planning',
+        address: '1234 Happy Street',
+        city: 'Springfield',
+        state: 'Missouri',
+        phone: '01234567',
+        website_url: 'http://www.beer.com',
+        showDetail: false,
+    },
+    {
+        title: 'DogFish',
+        type: 'Regional',
+        address: '1234 Happy Street',
+        city: 'Springfield',
+        state: 'Oklahoma',
+        phone: '01234567',
+        website_url: 'http://www.beer.com',
         showDetail: false
     },
     {
-        title: 'Planet Earth II',
-        description: "Hours of beautiful but heart attack-inducing nature footage",
-        genre: 'Documentary',
-        director: 'David Attenborough',
-        rating: 'G',
+        title: 'Coors',
+        type: 'Micro',
+        address: '1234 Happy Street',
+        city: 'Springfield',
+        state: 'Texas',
+        phone: '01234567',
+        website_url: 'http://www.beer.com',
         showDetail: false,
     },
     {
-        title: 'Titanic',
-        description: "The boat sinks.",
-        genre: 'Romance',
-        director: 'James Cameron',
-        rating: 'PG-13',
+        title: 'Heineken',
+        type: 'Planning',
+        address: '1234 Happy Street',
+        city: 'Springfield',
+        state: 'California',
+        phone: '01234567',
+        website_url: 'http://www.beer.com',
         showDetail: false,
     }
 ]
 
 const app = new Vue(
     {
-        el: '#movie-list',
+        el: '#brewery-list',
         data: {
-            title: 'Movie Library',
-            movieList: movie,
-            rating: '',
-            image: movie.img
+            title: 'Brewery Library',
+            breweryList: brewery,
+            state: '',
         },
         methods: {
-            toggleDetails: function (movie) {
-                movie.showDetail = !movie.showDetail
+            toggleDetails: function (brewery) {
+                brewery.showDetail = !brewery.showDetail
                 
             },
             filterList: function () {
-                this.rating = event.target.value;
+                this.state = event.target.value;
             }
         },
         computed: {
             uniqueItemsList: function () {
-                const ratings = [];
-                this.movieList.forEach((item) => {
-                    if (!ratings.includes(item.rating)) {
-                        ratings.push(item.rating);
+                const states = [];
+                this.breweryList.forEach((item) => {
+                    if (!states.includes(item.state)) {
+                        states.push(item.state);
                     }
                 });
-                return ratings;
+                return states;
             }
         }
     },
@@ -98,49 +104,91 @@ new Vue(
     {
         el: '#categories',
         data: {
-            title: 'Movie Library',
-            movieList: movie,
-            rating: '',
-            genre: movie.genre,
-            image: movie.img
+            title: 'Brewery Library',
+            breweryList: brewery,
+            state: '',
+            type: brewery.type,
         },
         methods: {
-            toggleCategories: function (movie) {
-                movie.showDetail = !movie.showDetail
+            toggleCategories: function (brewery) {
+                brewery.showDetail = !brewery.showDetail
             },
 
             filterList: function () {
-                this.genre = event.target.value;
+                this.type = event.target.value;
             }
         },
         computed: {
-            uniqueGenre: function () {
-                const genres = [];
-                this.movieList.forEach((item) => {
-                    if (!genres.includes(item.genre)) {
-                        genres.push(item.genre);
+            uniqueType: function () {
+                const types = [];
+                this.breweryList.forEach((item) => {
+                    if (!types.includes(item.type)) {
+                        types.push(item.type);
                     }
                 });
-                return genres;
+                return types;
 
             }
         }
     },
 );
 
-// Random Page 
 
-const vm = new Vue({
+new Vue({
     el: '#random',
-    data: {
-        results: []
+    data() {
+        return {
+            info: null
+        }
+    },
+    methods: {
+        myFunction: function () {
+            this.randomNumber = Math.floor(Math.random() * (10 - 1 + 1)) + 1;
+        }
     },
     mounted() {
-        axios.get("https://api.randomuser.me/")
+        axios
+            .get('https://api.openbrewerydb.org/breweries?page=1&per_page=10')
             .then(response => {
-                this.results = response.data.results
-                console.log(this.results)
+                this.info = response.data
+                console.log(this.info)
             })
-    } 
-});
+    }
+})
 
+new Vue({
+    el: '#all',
+    data() {
+        return {
+            apicall: null
+        };
+    },
+    mounted() {
+        axios
+            .get('https://api.openbrewerydb.org/breweries?page=1&per_page=20')
+            .then(response => {
+                this.apicall = response.data
+            })
+
+    }
+})
+
+// random number for random api call array
+ new Vue({
+     el: '#number',
+
+     data: {
+         randomNumber: ''
+     },
+
+     methods: {
+         myFunction: function () {
+             this.randomNumber = Math.floor(Math.random() * (10 - 1 + 1)) + 1;
+         }
+     }
+
+ });
+
+// multiples: https://api.openbrewerydb.org/breweries?page=1&per_page=20
+
+// by category (type) https://api.openbrewerydb.org/breweries?by_type=micro

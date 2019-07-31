@@ -5,20 +5,25 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="shortcut icon" type="image/png" href="images/popcorn.png" />
+        <link rel="shortcut icon" type="image/png" href="images/beer.png" />
         <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles.css">
-        <title>Movie Library</title>
+        <title>Brewery Library</title>
     </head>
 
     <body>
         <div id="menu" class="menu">
-            <nav-bar :href="post.title.toLowerCase() + '.html'" v-for="post in posts" v-bind:key="post.id" v-bind:title="post.title"></nav-bar>
+            <h1>Breweries</h1>
+            <nav-bar :href="post.title.toLowerCase() + '.html'" 
+                v-for="post in posts" 
+                v-bind:key="post.id" 
+                v-bind:title="post.title">
+            </nav-bar>
         </div>
         <div class="container">
             <div id="categories" >
                 <ul v-on:change="filterList">
-                    <li v-for="item in uniqueGenre"
+                    <li v-for="item in uniqueType"
                     class="more"
                     v-on:click="toggleCategories(movie)"
                    >

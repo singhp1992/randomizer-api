@@ -23,7 +23,9 @@ p {
 }
 
 .welcome-background {
-    background-image: url('images/movie-library.jpg');
+    background-image: url('images/welcome.jpg');
+    background-size: cover;
+    background-attachment: fixed;
     height: 100%;
     width: 100%;
 }
@@ -35,7 +37,7 @@ p {
 }
 
 .fade-header {
-    margin-top: 300px;
+    margin-top: 220px;
     font-size: 30px;
 
 
@@ -47,7 +49,7 @@ p {
 }
 
 .fade-button {
-    margin-top: 120px;
+    margin-top: 350px;
     font-size: 25px;
 
 
@@ -101,8 +103,10 @@ p {
 
 .menu :first-child {
     text-shadow: rgb(241, 217, 119) 1px 0 15px;
-    margin: 40px 450px 0 20px;
+    margin: 40px 520px 0 20px;
     font-size: 40px;
+    color: rgba(255, 255, 255, 0.897);
+    text-transform: uppercase;
 }
 
 .menu :last-child {
@@ -193,10 +197,11 @@ ul {
     width: 45%;
 }
 
-.random-movie {
+.random-brewery {
+    padding-top: 50px;
     text-align: center;
-    /* placeholder height */
-    height: 400px;
+    text-transform: capitalize;
+    height: 300px;
 }
 
 .random-button {
@@ -210,6 +215,7 @@ button {
     height: 50px;
     font-size: 16px;
     -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.07);
+    cursor: pointer;
 }
 
 li {
@@ -230,11 +236,6 @@ li.book {
 
 li.streaming {
     border-left: #a0f2d0 solid 5px;
-}
-
-.byline {
-    font-size: 14px;
-    font-style: italic;
 }
 
 select {
