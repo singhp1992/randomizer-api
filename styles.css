@@ -42,6 +42,7 @@ p {
     font-size: 30px;
     text-align: center;
     color: white;
+    text-shadow: 2px 2px rgb(0, 0, 0);
 
     -webkit-animation: fadein 5s;
     -moz-animation: fadein 5s;
