@@ -29,7 +29,6 @@ p {
 }
 
 .welcome-design {
-    font-size: 30px;
     text-align: center;
     color: white;
     text-shadow: 2px 2px rgb(0, 0, 0);
@@ -37,6 +36,8 @@ p {
 
 .fade-header {
     margin-top: 300px;
+    font-size: 30px;
+
 
     -webkit-animation: fadein 5s;
     -moz-animation: fadein 5s;
@@ -47,6 +48,8 @@ p {
 
 .fade-button {
     margin-top: 120px;
+    font-size: 25px;
+
 
     -webkit-animation: fadein 15s;
     -moz-animation: fadein 15s;
@@ -85,7 +88,9 @@ p {
 }
 
 .menu {
-    background-color: #3B945E;
+    background-image: url('images/movie-curtain2.jpg');
+    height: 100px;
+    /* background-color: #3B945E; */
     -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.07);
     position: fixed;
     top: 0;
