@@ -21,7 +21,7 @@ const movie = [
         description: "A delightful children's movie.",
         genre: 'Family',
         director: 'Karen Gilchrist',
-        rating: 'G',
+        state: 'Kansas',
         showDetail: false,
         // img: require('https://m.media-amazon.com/images/M/MV5BMTg2MzI1MTg3OF5BMl5BanBnXkFtZTgwNTU3NDA2MTI@._V1_SX300.jpg'),
 
@@ -31,7 +31,7 @@ const movie = [
         description: "A delightful children's movie.",
         genre: 'Family',
         director: 'Karen Gilchrist',
-        rating: 'G',
+        state: 'Missouri',
         showDetail: false,
     },
     {
@@ -39,7 +39,7 @@ const movie = [
         description: "Crazy Cannibal",
         genre: 'Horror',
         director: 'Ron Bozman',
-        rating: 'R',
+        state: 'Oklahoma',
         showDetail: false
     },
     {
@@ -47,7 +47,7 @@ const movie = [
         description: "Hours of beautiful but heart attack-inducing nature footage",
         genre: 'Documentary',
         director: 'David Attenborough',
-        rating: 'G',
+        state: 'Texas',
         showDetail: false,
     },
     {
@@ -55,7 +55,7 @@ const movie = [
         description: "The boat sinks.",
         genre: 'Romance',
         director: 'James Cameron',
-        rating: 'PG-13',
+        state: 'California',
         showDetail: false,
     }
 ]
@@ -66,7 +66,7 @@ const app = new Vue(
         data: {
             title: 'Movie Library',
             movieList: movie,
-            rating: '',
+            state: '',
             image: movie.img
         },
         methods: {
@@ -75,18 +75,18 @@ const app = new Vue(
                 
             },
             filterList: function () {
-                this.rating = event.target.value;
+                this.state = event.target.value;
             }
         },
         computed: {
             uniqueItemsList: function () {
-                const ratings = [];
+                const states = [];
                 this.movieList.forEach((item) => {
-                    if (!ratings.includes(item.rating)) {
-                        ratings.push(item.rating);
+                    if (!states.includes(item.state)) {
+                        states.push(item.state);
                     }
                 });
-                return ratings;
+                return states;
             }
         }
     },
@@ -99,7 +99,7 @@ new Vue(
         data: {
             title: 'Movie Library',
             movieList: movie,
-            rating: '',
+            state: '',
             genre: movie.genre,
             image: movie.img
         },
@@ -127,21 +127,6 @@ new Vue(
     },
 );
 
-// Random Page 
-
-// const vm = new Vue({
-//     el: '#random',
-//     data: {
-//         results: ''
-//     },
-//     mounted() {
-//         axios.get("")
-//             .then(response => {
-//                 this.results = response.data.results
-//                 console.log(this.results)
-//             })
-//     } 
-// });
 
 new Vue({
     el: '#random',
