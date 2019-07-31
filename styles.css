@@ -145,7 +145,7 @@ a {
 
 a:hover {
     color: white;
-    text-shadow: rgb(241, 217, 119) 1px 0 10px;
+    text-shadow: rgb(241, 217, 119) 1px 0 15px;
     /* text-shadow: 2px 2px 40px rgb(253, 239, 200); */
 }
 
