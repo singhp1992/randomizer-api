@@ -38,15 +38,16 @@ p {
 }
 
 #test {
-    margin-top: 25px;
-    font-size: 21px;
+    margin-top: 300px;
+    font-size: 30px;
     text-align: center;
+    color: white;
 
-    -webkit-animation: fadein 4s;
-    -moz-animation: fadein 4s;
-    -ms-animation: fadein 4s;
-    -o-animation: fadein 4s;
-    animation: fadein 4s;
+    -webkit-animation: fadein 5s;
+    -moz-animation: fadein 5s;
+    -ms-animation: fadein 5s;
+    -o-animation: fadein 5s;
+    animation: fadein 5s;
 }
 
 @keyframes fadein {
