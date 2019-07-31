@@ -21,6 +21,7 @@
                 v-bind:title="post.title">
             </nav-bar>
         </div>
+
         <div class="container" id="random">
                 <div class="random-brewery">
                     <p>Title: {{ info[1].name }}</p>
@@ -32,6 +33,11 @@
             <div class="random-button">
                 <button>Another One!</button>
             </div>
+        </div>
+
+        <div id="number">
+            <p>Random Number = {{randomNumber}}</p>
+            <button @click="myFunction()">Click Me</button>
         </div>
 
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>

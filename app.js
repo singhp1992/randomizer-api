@@ -132,7 +132,9 @@ new Vue({
         }
     },
     methods: {
-
+        randomNumber: function () {
+            return Math.floor(Math.random() * (10 - 1 + 1)) + 1;
+        }
     },
     mounted() {
         axios
@@ -160,6 +162,21 @@ new Vue({
 
     }
 })
+
+ new Vue({
+     el: '#number',
+
+     data: {
+         randomNumber: ''
+     },
+
+     methods: {
+         myFunction: function () {
+             this.randomNumber = Math.floor(Math.random() * (10 - 1 + 1)) + 1;
+         }
+     }
+
+ });
 
 // multiples: https://api.openbrewerydb.org/breweries?page=1&per_page=20
 
