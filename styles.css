@@ -23,7 +23,7 @@ p {
 }
 
 .welcome-background {
-    background-image: url('images/movie-library.jpg');
+    background-image: url('images/welcome.jpg');
     height: 100%;
     width: 100%;
 }
