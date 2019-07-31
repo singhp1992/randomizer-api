@@ -136,7 +136,7 @@ const vm = new Vue({
         results: []
     },
     mounted() {
-        axios.get("https://api.randomuser.me/?inc=gender,name,nat,email&results=3&nat=us,")
+        axios.get("https://api.nytimes.com/svc/books/v3/lists/names.json?api-key=4n5lE5ZwsDm25Ly8WGEovwlz4RulFzbt")
             .then(response => {
                 this.results = response.data.results
                 console.log(this.results)
