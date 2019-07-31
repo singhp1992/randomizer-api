@@ -128,3 +128,19 @@ new Vue(
     },
 );
 
+// Random Page 
+
+const vm = new Vue({
+    el: '#random',
+    data: {
+        results: []
+    },
+    mounted() {
+        axios.get("https://api.randomuser.me/")
+            .then(response => {
+                this.results = response.data.results
+                console.log(this.results)
+            })
+    } 
+});
+

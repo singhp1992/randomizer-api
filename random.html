@@ -15,17 +15,34 @@
         <div id="menu" class="menu">
             <nav-bar :href="post.title.toLowerCase() + '.html'" v-for="post in posts" v-bind:key="post.id" v-bind:title="post.title"></nav-bar>
         </div>
-        <div class="container">
-           <div class="random-movie">
+        <div class="container" id="random">
+           <!-- <div class="random-movie" v-for="result in results">
                 <h3>Your Random Movie is... </h3>
-                <p>Title: </p>
+                <p>Title: {{ result.title }}</p>
                 <p>Description: </p>
                 <p>Rating: </p>
-            </div>
+            </div> -->
+
+                <div class="container" id="random">
+                    <h3 class="text-center">VueNews</h3>
+                    <div class="columns medium-3" v-for="result in results">
+                        <div class="card">
+                            <div class="card-divider">
+                                {{ result.name.first}}
+                            </div>
+                            <div class="card-section">
+                                <p>{{ result.updated }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             <div class="random-button">
                 <button>Another One!</button>
             </div>
         </div>
+
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
         <script src="app.js"></script>
     </body>
