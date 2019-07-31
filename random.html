@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="shortcut icon" type="image/png" href="images/popcorn.png" />
-        <link href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles.css">
         <title>Movie Library</title>
     </head>
@@ -16,6 +16,12 @@
             <nav-bar :href="post.title.toLowerCase() + '.html'" v-for="post in posts" v-bind:key="post.id" v-bind:title="post.title"></nav-bar>
         </div>
         <div class="container">
+           <div class="random-movie">
+                <h3>Your Random Movie is... </h3>
+                <p>Title: </p>
+                <p>Description: </p>
+                <p>Rating: </p>
+            </div>
             <div class="random-button">
                 <button>Another One!</button>
             </div>
