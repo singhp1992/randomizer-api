@@ -95,13 +95,17 @@ p {
     width: 100%;
     z-index: 10;
     display: inline-flex;
-    justify-content: center;
+    justify-content: space-around;
     margin-left: -10px;
+}
+
+.menu :first-child {
+    text-shadow: rgb(241, 217, 119) 1px 0 15px;
 }
 
 .menu a,
 .genres {
-    margin: 30px 20px 0 20px;
+    margin: 50px 20px 0 20px;
     color: rgba(255, 255, 255, 0.897);
     text-transform: uppercase;
 }
