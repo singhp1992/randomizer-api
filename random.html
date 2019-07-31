@@ -13,7 +13,13 @@
 
     <body>
         <div id="menu" class="menu">
-            <nav-bar :href="post.title.toLowerCase() + '.html'" v-for="post in posts" v-bind:key="post.id" v-bind:title="post.title"></nav-bar>
+            <p>Brewery Library</p>
+            <nav-bar 
+                :href="post.title.toLowerCase() + '.html'" 
+                v-for="post in posts" 
+                v-bind:key="post.id" 
+                v-bind:title="post.title">
+            </nav-bar>
         </div>
         <div class="container" id="random">
            <div class="random-movie">

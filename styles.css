@@ -101,8 +101,10 @@ p {
 
 .menu :first-child {
     text-shadow: rgb(241, 217, 119) 1px 0 15px;
-    margin: 40px 450px 0 20px;
+    margin: 40px 520px 0 20px;
     font-size: 40px;
+    color: rgba(255, 255, 255, 0.897);
+    text-transform: uppercase;
 }
 
 .menu :last-child {
