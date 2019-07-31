@@ -131,12 +131,15 @@ new Vue({
             info: null
         }
     },
+    methods: {
+
+    },
     mounted() {
         axios
             .get('https://api.openbrewerydb.org/breweries?page=1&per_page=10')
             .then(response => {
                 this.info = response.data
-                console.log(this.info[0])
+                console.log(this.info)
             })
     }
 })
