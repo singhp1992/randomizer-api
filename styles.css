@@ -179,6 +179,7 @@ ul {
     list-style-type: none;
     padding-left: 0;
     border-radius: 5px;
+    width: 45%;
 }
 
 .random-button {
