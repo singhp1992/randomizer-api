@@ -21,7 +21,8 @@
             </nav-bar>
         </div>
 
-        <div class="container">
+        <div class="container" id="all">
+            <p>practice here: {{ apicall[0].city }}</p>
             <div id="brewery-list">
                 Sort by State:  
                 <select v-on:change="filterList"> 
@@ -43,6 +44,8 @@
                 </ul>
             </div>
         </div>
+
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
         <script src="app.js"></script>
     </body>

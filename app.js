@@ -19,7 +19,7 @@ const brewery = [
     {
         title: 'The Lion King',
         description: "A delightful children's movie.",
-        genre: 'Family',
+        genre: 'Micro',
         director: 'Karen Gilchrist',
         state: 'Kansas',
         showDetail: false,
@@ -27,7 +27,7 @@ const brewery = [
     {
         title: 'The Lion King II',
         description: "A delightful children's movie.",
-        genre: 'Family',
+        genre: 'Planning',
         director: 'Karen Gilchrist',
         state: 'Missouri',
         showDetail: false,
@@ -35,7 +35,7 @@ const brewery = [
     {
         title: 'Silence of the Lambs',
         description: "Crazy Cannibal",
-        genre: 'Horror',
+        genre: 'Regional',
         director: 'Ron Bozman',
         state: 'Oklahoma',
         showDetail: false
@@ -43,7 +43,7 @@ const brewery = [
     {
         title: 'Planet Earth II',
         description: "Hours of beautiful but heart attack-inducing nature footage",
-        genre: 'Documentary',
+        genre: 'Micro',
         director: 'David Attenborough',
         state: 'Texas',
         showDetail: false,
@@ -51,7 +51,7 @@ const brewery = [
     {
         title: 'Titanic',
         description: "The boat sinks.",
-        genre: 'Romance',
+        genre: 'Planning',
         director: 'James Cameron',
         state: 'California',
         showDetail: false,
@@ -136,8 +136,27 @@ new Vue({
             .get('https://api.openbrewerydb.org/breweries/0009')
             .then(response => {
                 this.info = response.data
-                console.log(this.info)
             })
 
     }
 })
+
+new Vue({
+    el: '#all',
+    data() {
+        return {
+            apicall: null
+        }
+    },
+    mounted() {
+        axios
+            .get('https://api.openbrewerydb.org/breweries?page=1&per_page=20')
+            .then(response => {
+                this.apicall = response.data
+                console.log(this.apicall)
+            })
+
+    }
+})
+
+// multiples: https://api.openbrewerydb.org/breweries?page=1&per_page=20
