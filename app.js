@@ -132,8 +132,8 @@ new Vue({
         }
     },
     methods: {
-        randomNumber: function () {
-            return Math.floor(Math.random() * (10 - 1 + 1)) + 1;
+        myFunction: function () {
+            this.randomNumber = Math.floor(Math.random() * (10 - 1 + 1)) + 1;
         }
     },
     mounted() {
@@ -151,7 +151,7 @@ new Vue({
     data() {
         return {
             apicall: null
-        }
+        };
     },
     mounted() {
         axios
@@ -163,6 +163,7 @@ new Vue({
     }
 })
 
+// random number for random api call array
  new Vue({
      el: '#number',
 

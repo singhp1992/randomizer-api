@@ -22,22 +22,21 @@
             </nav-bar>
         </div>
 
-        <div class="container" id="random">
-                <div class="random-brewery">
+        <!-- add id="random" back to this container div -->
+        <div class="container" id="number">
+                <!-- <div class="random-brewery">
                     <p>Title: {{ info[1].name }}</p>
                     <p>Type: {{ info[1].brewery_type }}</p>
                     <p>Location: {{ info[1].street }} </br> {{ info[1].state }} </p>
                     <p>Contact: +1 {{ info[1].phone }}</p>
                     <p>Website: {{ info[1].website_url }}</p>
+                </div> -->
+                <div class="random-brewery">
+                    <p>Title: {{ randomNumber }}</p>
                 </div>
             <div class="random-button">
-                <button>Another One!</button>
+                <button @click="myFunction()">Another One!</button>
             </div>
-        </div>
-
-        <div id="number">
-            <p>Random Number = {{randomNumber}}</p>
-            <button @click="myFunction()">Click Me</button>
         </div>
 
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
