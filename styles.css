@@ -26,8 +26,14 @@ p {
     color: #333;
 }
 
+.welcome {
+    background-image: url('images/movie-library.jpg');
+    height: 100%;
+    width: 100%;
+}
+
 .menu {
-    background-color: #424141;
+    /* background-color: #424141; */
     -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.07);
     position: fixed;
     top: 0;
