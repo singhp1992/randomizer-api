@@ -24,6 +24,7 @@ p {
 
 .welcome-background {
     background-image: url('images/welcome.jpg');
+    background-size: cover;
     height: 100%;
     width: 100%;
 }
