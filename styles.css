@@ -13,10 +13,6 @@ body {
     height: 1500px;
 }
 
-/* .container>div {
-    padding-bottom: 30px;
-} */
-
 h3 {
     cursor: pointer;
     display: inline;
@@ -32,18 +28,31 @@ p {
     width: 100%;
 }
 
-#test {
-    margin-top: 300px;
+.welcome-design {
     font-size: 30px;
     text-align: center;
     color: white;
     text-shadow: 2px 2px rgb(0, 0, 0);
+}
+
+.fade-header {
+    margin-top: 300px;
 
     -webkit-animation: fadein 5s;
     -moz-animation: fadein 5s;
     -ms-animation: fadein 5s;
     -o-animation: fadein 5s;
     animation: fadein 5s;
+}
+
+.fade-button {
+    margin-top: 120px;
+
+    -webkit-animation: fadein 15s;
+    -moz-animation: fadein 15s;
+    -ms-animation: fadein 15s;
+    -o-animation: fadein 15s;
+    animation: fadein 15s;
 }
 
 @keyframes fadein {
@@ -73,20 +82,6 @@ p {
 @-o-keyframes fadein {
     from { opacity: 0; }
     to { opacity: 1; }
-}
-
-.welcome-button {
-    margin-top: 120px;
-    font-size: 30px;
-    text-align: center;
-    color: white;
-    text-shadow: 2px 2px rgb(0, 0, 0);
-
-    -webkit-animation: fadein 15s;
-    -moz-animation: fadein 15s;
-    -ms-animation: fadein 15s;
-    -o-animation: fadein 15s;
-    animation: fadein 15s;
 }
 
 .menu {
